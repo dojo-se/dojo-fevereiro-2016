@@ -41,3 +41,11 @@ func TestSimples_ABCD_Hifen(t *testing.T) {
     t.Error("Número de telefone deveria ser '2223-', mas foi ", numTelefone)
   }
 }
+
+func TestSimples_ABCD_Espaço(t *testing.T) {
+  numTelefone := getTelefone("ABCD ")
+
+  if numTelefone != "2223" {
+    t.Error("Número de telefone deveria ser '2223', mas foi ", numTelefone)
+  }
+}

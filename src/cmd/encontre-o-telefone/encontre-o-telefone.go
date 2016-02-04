@@ -8,9 +8,15 @@ func getTelefone(strTelefone string) (numTelefone string) {
     dict["C"] = "2"
     dict["D"] = "3"
     dict["-"] = "-"
+    dict[" "] = ""
     
     for index := 0; index < len(strTelefone); index++ {
-        numTelefone += dict[strTelefone[index:index+1]]
+        str, ok := dict[strTelefone[index:index+1]]
+        
+        if !ok {
+            return "test"     
+        }
+        numTelefone += str
     }
     
     return
