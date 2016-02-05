@@ -50,3 +50,12 @@ func TestSimples_ABCD_Espaço(t *testing.T) {
   } 
 
 }
+
+func TestSimples_Frase(t *testing.T) {
+  numTelefone, _ := getTelefone("The-quick-brown-fox-jumps-over-the-lazy-dog")
+
+  if numTelefone != "843-78425-27696-369-58677-6837-843-5299-364" {
+    t.Error("Número de telefone deveria ser '843-78425-27696-369-58677-6837-843-5299-364', mas foi ", numTelefone)
+  }
+}
+
